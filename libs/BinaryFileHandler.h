@@ -20,7 +20,18 @@ struct BinaryFileHandler {
 
         fstream file;
 
-    
+        file.open(fileName, ios::out | ios::binary);
+
+        if (file.fail()) {
+            return false;
+        }
+
+        for (int i = 0; i < list.size; i++) {
+            T element = list.get(i);
+            file.write(reinterpret_cast<char *>(&element), sizeof(T));
+        }
+
+        file.close();
 
         return true;
     }
@@ -31,6 +42,20 @@ struct BinaryFileHandler {
 
         fstream file;
 
+        file.open(fileName, ios::in | ios::binary);
+
+        if (file.fail()) {
+            return list;
+        }
+
+        T element;
+
+        while(file.read(reinterpret_cast<char *>(&element), sizeof(T))) {
+            list.add(element);
+        }
+
+        file.close();
+
 
         return list;
     }
@@ -39,7 +64,15 @@ struct BinaryFileHandler {
         
         fstream file;
 
-    
+        file.open(fileName, ios::out | ios::app | ios::binary);
+
+        if (file.fail()) {
+            return false;
+        }
+
+        file.write(reinterpret_cast<char *>(&element), sizeof(T));
+
+        file.close();
 
         return true;
     }
@@ -69,30 +102,16 @@ struct BinaryFileHandler {
 
         fstream file;
 
-        int fileSize = getFileSize();
+        List<T> list = readBinaryFile();
 
-        file.open(fileName, ios::out | ios::binary);
-
-        if (file.fail()) {
+        if (index < 0 || index >= list.size) {
             return false;
         }
 
-        int elementsCount = fileSize / sizeof(T);
+        list.remove(index);
 
-        if (index < 0 || index >= elementsCount) {
-            return false;
-        }
-
-        for (int i = 0; i < elementsCount; i++) {
-            if (i != index) {
-                T element = getElementFromFile(i);
-                file.write(reinterpret_cast<char *>(&element), sizeof(T));
-            }
-        }
-
-        file.close();
-
-        return true;
+        return writeBinaryFile(list);
+        
     }
 
     int getFileSize() {

@@ -1,9 +1,9 @@
-Tiendas Jupiter; www.tiendasjupiter.com; Parlantes tipo 1; 30/03/2023; 175000
-Yelao; www.yelao.com; Llantas marca a; 13/02/2023; 400000
-Logro; www.logro.com; Parlantes tipo 1; 28/03/2023; 172000
-Llanticas; www.llanticas.com; Llantas marca a; 16/02/2023; 412000
-Tiendas Saturno; www.tiendassaturno.com; Parlantes tipo 1; 29/03/2023; 173000
-Jumbo; www.jumbo.com; Llantas marca b; 14/02/2023; 1000000
-Tienda de anacleto; www.tiendadeanacleto.com; Parlantes tipo 2; 27/03/2023; 190000
-Tiendas Mercurio; www.tiendasmercurio.com; Parlantes tipo 2; 26/03/2023; 189000
-Tiendas Venus; www.tiendasvenus.com; Parlantes tipo 2; 25/03/2023; 188000
+Tiendas Jupiter;www.tiendasjupiter.com;Parlantes tipo 1;30/03/2023;175000
+Yelao;www.yelao.com;Llantas marca a;13/02/2023;400000
+Logro;www.logro.com;Parlantes tipo 1;28/03/2023;172000
+Llanticas;www.llanticas.com;Llantas marca a;16/02/2023;412000
+Tiendas Saturno;www.tiendassaturno.com;Parlantes tipo 1;29/03/2023;173000
+Jumbo;www.jumbo.com;Llantas marca b;14/02/2023;100000
+Tienda de anacleto;www.tiendadeanacleto.com;Parlantes tipo 2;27/03/2023;190000
+Tiendas Mercurio;www.tiendasmercurio.com;Parlantes tipo 2;26/03/2023;189000
+Tiendas Venus;www.tiendasvenus.com;Parlantes tipo 2;25/03/2023;188000
